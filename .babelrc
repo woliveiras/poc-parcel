@@ -1,0 +1,22 @@
+{
+  "presets": [["@babel/preset-env", { "modules": false }], "@babel/react"],
+  "plugins": [
+    ["babel-plugin-styled-components", {
+      "displayName": true,
+      "ssr": true
+    }],
+    "inline-react-svg",
+    ["@babel/plugin-transform-runtime", {
+      "useESModules": true
+    }]
+  ],
+  "env": {
+    "test": {
+      "presets": ["@babel/preset-env", "@babel/react"],
+      "plugins": [
+        "inline-react-svg",
+        "@babel/plugin-transform-runtime"
+      ]
+    }
+  }
+}
